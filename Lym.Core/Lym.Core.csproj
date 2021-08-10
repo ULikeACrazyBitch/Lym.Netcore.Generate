@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSRedisCore" Version="3.6.6" />
+    <PackageReference Include="SqlSugarCore" Version="5.0.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lym.Common\Lym.Common.csproj" />
+    <ProjectReference Include="..\Lym.Model\Lym.Model.csproj" />
+  </ItemGroup>
+
+</Project>

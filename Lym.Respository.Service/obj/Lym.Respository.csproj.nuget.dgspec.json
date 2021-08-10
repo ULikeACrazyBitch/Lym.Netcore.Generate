@@ -1,0 +1,326 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Respository\\Lym.Respository.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.BaseRespository\\Lym.BaseRespository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.BaseRespository\\Lym.BaseRespository.csproj",
+        "projectName": "Lym.BaseRespository",
+        "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.BaseRespository\\Lym.BaseRespository.csproj",
+        "packagesPath": "C:\\Users\\yangmingliu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.BaseRespository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\yangmingliu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Core\\Lym.Core.csproj": {
+                "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Core\\Lym.Core.csproj"
+              },
+              "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj": {
+                "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Common\\Lym.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Common\\Lym.Common.csproj",
+        "projectName": "Lym.Common",
+        "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Common\\Lym.Common.csproj",
+        "packagesPath": "C:\\Users\\yangmingliu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\yangmingliu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Core\\Lym.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Core\\Lym.Core.csproj",
+        "projectName": "Lym.Core",
+        "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Core\\Lym.Core.csproj",
+        "packagesPath": "C:\\Users\\yangmingliu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\yangmingliu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Common\\Lym.Common.csproj": {
+                "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Common\\Lym.Common.csproj"
+              },
+              "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj": {
+                "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "SqlSugar": {
+              "target": "Package",
+              "version": "[5.0.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj",
+        "projectName": "Lym.Model",
+        "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\Lym.Model.csproj",
+        "packagesPath": "C:\\Users\\yangmingliu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\yangmingliu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "SqlSugar": {
+              "target": "Package",
+              "version": "[5.0.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Respository\\Lym.Respository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Respository\\Lym.Respository.csproj",
+        "projectName": "Lym.Respository",
+        "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Respository\\Lym.Respository.csproj",
+        "packagesPath": "C:\\Users\\yangmingliu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.Respository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\yangmingliu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.BaseRespository\\Lym.BaseRespository.csproj": {
+                "projectPath": "C:\\Users\\yangmingliu\\source\\repos\\Lym.Interface.Api.Test\\Lym.BaseRespository\\Lym.BaseRespository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

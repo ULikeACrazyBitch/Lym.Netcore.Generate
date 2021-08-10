@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+ <ItemGroup>
+    <ProjectReference Include="..\Lym.Core\Lym.Core.csproj" />
+    <ProjectReference Include="..\Lym.Model\Lym.Model.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,309 @@
+﻿@using Lym.Models.Entity.Codegenerate
+@{
+    ViewData["Title"] = "项目生成";
+    Layout = "~/Views/_main.cshtml";
+
+    var fileProjects = ViewBag.fileProjects as List<FileProject>;
+    var fileProjecttypes = ViewBag.fileProjecttypes as List<FileProjecttype>;
+    var databaseList = ViewBag.databaseList as List<Database>;
+}
+@section css{
+    <link rel="stylesheet" href="~/style/layui-select.css" media="all">
+}
+<div class="layui-fluid">
+    <div class="layui-card">
+        @*表格上方搜索*@
+        <div class="layui-form layui-card-header layuiadmin-card-header-auto">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">项目</label>
+                    <div class="layui-input-inline">
+                        <select name="projectId" id="projectId">
+                            @{
+                                            <option value="0">全部</option> foreach (var item in fileProjects)
+                                                        {
+                                            <option value="@item.Id">@item.ProjectName</option> } }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">项目类型</label>
+                    <div class="layui-input-inline">
+                        <select name="projectTypeId" id="projectTypeId">
+                            @{
+                                            <option value="0">全部</option> foreach (var item in fileProjecttypes)
+                                                        {
+                                            <option value="@item.Id">@item.ProjectTypeName</option> } }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">数据库</label>
+                    <div class="layui-input-inline">
+                        <select name="databaseIds" id="databaseIds" multiple="multiple">
+                            @{
+                                            <option value="">请选择数据库</option> foreach (var item in databaseList)
+                                                        {
+                                            <option value="@item.Id">@item.DatabaseName</option> } }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <button class="layui-btn" id="btnsearch" type="button" data-type="reload">查找</button>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn" id="btnGenerate" type="button" data-type="Generate">点击生成项目</button>
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn" id="btnGeneratesln" type="button" data-type="Generatesln">点击解决方案</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layui-card-body">
+            @*<script type="text/html" id="toolbarDemo">
+                    <div class="layui-btn-container">
+                        <div class="layui-btn layui-btn-primary layui-btn-xs" lay-event="add"><i class="layui-icon layui-icon-add-1"></i>新增</div>
+                        <div class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>修改</div>
+                        <div class="layui-btn layui-btn-primary layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</div>
+                    </div>
+                </script>*@
+            <table id="tb1" class="layui-table" lay-filter="tb1"></table>
+            @*表格行操作 新增、修改、删除*@
+            @*<script type="text/html" id="actions">
+                    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">编辑</a>
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                </script>*@
+        </div>
+
+    </div>
+</div>
+<input id="status" type="hidden" />
+@section js{
+    <script>
+        layui.config({
+            base: '@Url.Content("~/")' //静态资源所在路径
+        }).extend({
+            index: 'lib/index'//主入口模块
+            }).use(['index', 'table', "laydate"], function () {
+            var $ = layui.$
+                , table = layui.table
+                , layer = layui.layer
+                , laydate = layui.laydate;
+
+
+            var dataInfo = table.render({
+                elem: '#tb1'
+                , url: "@Url.Action("GetProjectList", "ProjectCodeGenerate")"
+                , limit: 20
+                , limits: [20, 40, 60, 80, 100, 500, 1000]
+                , page: false //开启分页
+                , done: function (res, curr, count) {
+                    //如果是异步请求数据方式，res即为你接口返回的信息。
+                    //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                    //得到当前页码
+                    //console.log(curr);
+                    //得到数据总量
+                    //console.log(count);
+                }
+                , totalRow: true
+                , toolbar: '#toolbarDemo'//
+                , defaultToolbar: ['filter', 'print', 'exports']
+                , title: '数据库列表'
+                , height: 'full-138'
+                , cols: [[
+                    { title: '序号', type: 'numbers', }
+                    , { field: 'fileName', width: 520, title: '文件名称' }
+                    //, { field: 'id', width: 80, title: 'ID', sort: true, align: 'center', hide: true }
+                    , { field: 'fileType', width: 120, title: '文件类型' }
+                    , { field: 'projectName', width: 120, title: '项目名称' }
+                    , { field: 'projectType', width: 120, title: '项目类型' }
+
+                    //, { field: 'upperlevelDirectoryName', width: 120, title: '上一级目录' }
+
+                ]]
+                , page: {
+                    theme: '#a70000', first: '首页'
+                    , last: '尾页'
+                }
+            });
+
+            active = {
+                reload: function () {
+                    var projectTypeId = $("#projectTypeId").val();
+                    var projectId = $("#projectId").val();
+                    var databaseIds = $("select[name='databaseIds']").val();
+                    table.reload('tb1', {
+                        page: { curr: 1 }
+                        , where: {
+                            projectId: projectId,
+                            projectTypeId: projectTypeId,
+                            databaseIds: databaseIds.join(",")
+                        }
+                    }, 'data');
+                }
+            };
+
+                //监听头工具栏事件
+            table.on('toolbar(tb1)', function (obj) {
+                    var checkStatus = table.checkStatus(obj.config.id)
+                        , data = checkStatus.data; //获取选中的数据
+                    switch (obj.event) {
+                        case 'add':
+                            //layer.msg('添加');
+                            add();
+                            break;
+                        case 'edit':
+                            if (data.length === 0) {
+                                layer.msg('请选择一行');
+                            } else if (data.length > 1) {
+                                layer.msg('只能同时编辑一个');
+                            } else {
+                                //layer.alert('编辑 [id]：' + checkStatus.data[0].uid);
+                                edit(checkStatus.data[0].id);
+                            }
+                            break;
+                        case 'del':
+                            if (data.length === 0) {
+                                layer.msg('请选择一行');
+                            } else {
+
+                                layer.confirm('真的删除行么', function (index) {
+                                    layer.close(index);
+                                    //向服务端发送删除指令
+                                    del(index,checkStatus.data[0].id);
+                                });
+                            }
+                            break;
+                    };
+            });
+            $('#searchbtn').on('click', function () {
+                var type = $(this).data('type');
+                active[type] ? active[type].call(this) : '';
+            });
+
+            $("#btnGenerate").on('click', function () {
+                var projectTypeId = $("#projectTypeId").val();
+                var projectId = $("#projectId").val();
+                var databaseIds = $("select[name='databaseIds']").val();
+                var layerindex = layer.load();
+                var url = '@Url.Action("Generate", "ProjectCodeGenerate")' + '?projectId=' + projectId + '&projectTypeId=' + projectTypeId + "&databaseIds=" + databaseIds;
+                var layerindex = layer.load();
+                $.getJSON(url, function (result) {
+                     layer.closeAll(); //疯狂模式，关闭所有层
+                     if (result.code == 0) {
+                           layer.msg(result.msg);
+                           window.location.href = "@Url.Action("DownloadZip", "ProjectCodeGenerate")?zipFilePath=" + result.data;
+                     } else {
+                           layer.msg(result.msg);
+                     }
+                });
+            });
+                $("#btnGeneratesln").on('click', function () {
+                   
+                   layer.prompt({
+                    formType: 2,
+                    title: '请输入解决方案名称',
+                    },function (value, index, elem) {
+                        var projectTypeId = $("#projectTypeId").val();
+                        var projectId = $("#projectId").val();
+                        var databaseIds = $("select[name='databaseIds']").val();
+                        var url = '@Url.Action("Generatesln", "ProjectCodeGenerate")' + '?projectId=' + projectId + '&projectTypeId=' + projectTypeId + '&slnname=' + value + "&databaseIds=" + databaseIds;
+                        var layerindex = layer.load();
+                        $.getJSON(url, function (result) {
+                            layer.closeAll(); //疯狂模式，关闭所有层
+                            if (result.code == 0) {
+                                layer.msg(result.msg);
+                                window.location.href = "@Url.Action("DownloadZip", "ProjectCodeGenerate")?zipFilePath=" + result.data;
+                            } else {
+                                layer.msg(result.msg);
+                            }
+                        });
+
+                    });
+               
+             });
+
+             //新增
+            function add() {
+                var url = '@Url.Action("Add", "FileTemplate")';
+                var index =layui.layer.open({
+                    type: 2,
+                    area: ['80%', '60%'],
+                    content: url,
+                    cancel: function (index, layero) {
+                        layer.close(index);
+                        return false;
+                    },
+                    end: function () {
+                        if ($("#status").val() == 0) {
+                            dataInfo.reload();
+                            $("#status").val(-100);
+                        }
+                    }
+                });
+                layer.full(index);
+            }
+            //编辑
+            function edit(id) {
+                var url = '@Url.Action("Edit", "FileTemplate")' + '?Id=' + id;
+               var index= layui.layer.open({
+                    type: 2,
+                    area: ['80%', '60%'],
+                    content: url,
+                    cancel: function (index, layero) {
+                        layer.close(index);
+                        return false;
+                    },
+                    end: function () {
+                        if ($("#status").val() == 0) {
+                            dataInfo.reload();
+                            $("#status").val(-100);
+                        }
+                    }
+               });
+               layer.full(index);
+            }
+            //删除
+            function del(index,id) {
+                var url = '@Url.Action("Del", "FileTemplate")' + '?Id=' + id;
+                $.getJSON(url, function (result) {
+                    $("#status").val(result.code);
+                    returnBackMsg(index, result, "记录删除");
+                    if ($("#status").val() === '0') {
+                        dataInfo.reload();
+                        $("#status").val(-100);
+                    }
+                });
+            }
+
+                $('#btnsearch').on('click', function () {
+                    var type = $(this).data('type');
+                    active[type] ? active[type].call(this) : '';
+                });
+        });
+
+        // result{data,msg,code} action 0 添加，1 修改
+        function returnBackMsg(index, result, action) {
+            layer.close(index);
+            var code = 0;
+            var status = "";
+            if (result.code == 0) {
+                code = 6;
+                status = "成功";
+            }
+            else {
+                code = 5;
+                status = "失败";
+            }
+            layer.msg(action + status, { icon: code });
+        }
+    </script>
+}
+
+
+
+
+

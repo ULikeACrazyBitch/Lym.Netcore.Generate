@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Lym.Respository.Service</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lym.BaseRespository\Lym.BaseRespository.csproj" />
+    <ProjectReference Include="..\Lym.Respository.Interface\Lym.Respository.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

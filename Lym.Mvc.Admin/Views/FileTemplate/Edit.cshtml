@@ -1,0 +1,267 @@
+﻿@using Lym.Models.Entity.Codegenerate
+@using Lym.Model.Entity.CodeGenerate
+@{
+    ViewData["Title"] = "编辑项目模版";
+    Layout = "~/Views/_main.cshtml";
+    var fileProjects = ViewBag.fileProjects as List<FileProject>;
+    var fileProjecttypes = ViewBag.fileProjecttypes as List<FileProjecttype>;
+    var fileFiletypes = ViewBag.fileFiletypes as List<FileFiletype>;
+    var fileTemplates = ViewBag.fileTemplates as List<FileTemplate>;
+    var generateTypes = ViewBag.generateTypes as List<GenerateType>;
+    var fileTemplate =ViewBag.fileTemplate as FileTemplate;
+}
+
+<div class="layui-fluid">
+    <form class="layui-form">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                添加项目模版
+            </div>
+            <input type="hidden" id="Id" name="Id" value="@fileTemplate.Id" />
+            <input type="hidden" id="IsDeleted" name="IsDeleted" value="@fileTemplate.IsDeleted" />
+            <div class="layui-card-body layui-text">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">项目名称</label>
+                    <div class="layui-input-block">
+                        <select name="ProjectId" id="ProjectId" lay-filter="ProjectId">
+                            @{
+                                foreach (var item in fileProjects)
+                                {
+                                    if (fileTemplate.ProjectId == item.Id)
+                                    {
+                                        <option value="@item.Id" selected="selected">@item.ProjectName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.ProjectName</option>
+                                    }
+
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">项目类型</label>
+                    <div class="layui-input-block">
+                        <select name="ProjectTypeId" id="ProjectTypeId"  lay-filter="ProjectTypeId">
+                            @{
+                                foreach (var item in fileProjecttypes)
+                                {
+                                    if (fileTemplate.ProjectTypeId == item.Id)
+                                    {
+                                        <option value="@item.Id" selected="selected">@item.ProjectTypeName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.ProjectTypeName</option>
+                                    }
+
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文件类型</label>
+                    <div class="layui-input-block">
+                        <select name="FileTypeId" id="FileTypeId">
+                            @{
+                                foreach (var item in fileFiletypes)
+                                {
+                                    if (fileTemplate.FileTypeId == item.Id)
+                                    {
+                                        <option value="@item.Id" selected="selected">@item.FileTypeName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.FileTypeName</option>
+                                    }
+
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">上一级目录</label>
+                    <div class="layui-input-block">
+                        <select name="UpperlevelDirectoryId" id="UpperlevelDirectoryId" lay-filter="UpperlevelDirectoryId">
+                            @{
+                                <option value="0" selected="selected">无</option>
+                                foreach (var item in fileTemplates)
+                                {
+                                    if (fileTemplate.UpperlevelDirectoryId == item.Id)
+                                    {
+                                        <option value="@item.Id" selected="selected">@item.FileName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.FileName</option>
+                                    }
+
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"> 文件名称 </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="FileName" id="FileName" placeholder="可使用参数：@@(Model.ProjectName)、@@(Model.TableName)与循环生成混用" required lay-verify="required" autocomplete="off" class="layui-input" value="@fileTemplate.FileName">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">生成循环类型选择</label>
+                    <div class="layui-input-block">
+                        <select name="GenerateTypeId" id="GenerateTypeId">
+                            @{
+                                <option value="0" selected="selected">无</option>
+                                foreach (var item in generateTypes)
+                                {
+                                    if (fileTemplate.GenerateTypeId == item.Id)
+                                    {
+                                        <option value="@item.Id" selected="selected">@item.GenerateTypeName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.GenerateTypeName</option>
+                                    }
+
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"> 文件内容 </label>
+                    <div class="layui-input-block">
+                        <textarea name="Content" id="Content" placeholder="请输入内容" class="layui-textarea">@fileTemplate.Content</textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"> 文件内容可用参数 </label>
+                    <div class="layui-input-block">
+                        <pre class="layui-code">
+{
+"ProjectName":"Lym",                                //项目名称
+"ProjectType":"Respository.Interface",              //项目类型
+"DatabaseName":"Test2",                             //数据库库名称
+"TableName":"test2table",                           //数据库表名称
+"ClassName":"Test2table",                           //class类名称
+"NameSpace":"Lym.Respository.Interface.Test2",     //命名空间
+"Description":null,                                 //表备注
+"PropertyGenList":
+    [{
+        "IsPrimaryKey":false,               //是否主键
+        "Description":"",                   //数据字段备注
+        "DbColumnName":"name",              //数据库字段名称
+        "Type":"string",                    //class类 属性类型
+        "IsIdentity":false,                 //是否自增
+        "Required":false,                   //是否可以为空
+        "CodeTableId":null,                 //暂无
+        "ClassProperName":"Name"            //class类 属性名称
+    }]
+}
+      </pre>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" type="button" lay-submit lay-filter="go">立即提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section js{
+    <script>
+        layui.config({
+            base: '@Url.Content("~/")' //静态资源所在路径
+        }).extend({
+            index: 'lib/index' //主入口模块
+            }).use(['index', 'form','layer', 'upload'], function () {
+            var $ = layui.$
+                , upload = layui.upload
+                , layer = layui.layer
+                , form = layui.form;
+
+            form.on('select(ProjectId)', function (data) {
+                var val = data.value;
+                $.post('@Url.Action("GetProjectTypeSelect", "FileTemplate")', { projectid: val}, function (result) {
+                    if (result.code == 0) {
+                        //执行清空
+                        $("#ProjectTypeId").empty();
+                        $.each(result.data, function (index, item) {
+                            $('#ProjectTypeId').append(new Option(item.projectTypeName, item.id));
+                        });
+                        layui.form.render("select");
+                        getDirectory();
+                    }
+                    else {
+                        layer.msg('操作失败', { icon: 2 });
+                    }
+
+                });
+
+            })
+                form.on('select(ProjectTypeId)', function (data) {
+                    getDirectory();
+
+                });
+                function getDirectory() {
+                    var projectid = $("#ProjectId").val();
+                    var projectTypeid = $("#ProjectTypeId").val();
+                    $.post('@Url.Action("GetUpperlevelDirectory", "FileTemplate")', { projectId: projectid, projectTypeid: projectTypeid}, function (result) {
+                    if (result.code == 0) {
+                        //执行清空
+                        $("#UpperlevelDirectoryId").empty();
+
+                        $('#UpperlevelDirectoryId').append(new Option("无", 0));
+                        $.each(result.data, function (index, item) {
+                            $('#UpperlevelDirectoryId').append(new Option(item.fileName+"("+item.fileType+")", item.id));
+                        });
+                        layui.form.render("select");
+                    }
+                    else {
+                        layer.msg('操作失败', { icon: 2 });
+                    }
+
+                });
+            }
+                getDirectory();
+            //提交保存
+            form.on('submit(go)', function (data) {
+
+                $.post('@Url.Action("Save", "FileTemplate")', data.field, function (result) {
+                    if (parent.layer.getFrameIndex(window.name)) {
+                        var index = parent.layer.getFrameIndex(window.name);//先得到当前iframe层的索引
+                        var action = "记录添加";
+                        $(window.parent.document).find("#status").val(result.code);
+                        parent.returnBackMsg(index, result, action);
+                    } else {
+                        if (result.code == 0) {
+                            layer.msg('操作成功', {icon:1});
+                        }
+                        else {
+                            layer.msg('操作失败', {icon:2});
+                        }
+                    }
+
+                });
+                return true;
+            });
+
+        });
+    </script>
+}
+
+
+
+
+
+

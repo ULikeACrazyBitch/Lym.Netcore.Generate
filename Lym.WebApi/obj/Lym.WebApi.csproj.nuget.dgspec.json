@@ -1,0 +1,653 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.WebApi\\Lym.WebApi.csproj": {}
+  },
+  "projects": {
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj",
+        "projectName": "Lym.Application",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj",
+        "projectName": "Lym.BaseRespository",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Core\\Lym.Core.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Core\\Lym.Core.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Business\\Lym.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Business\\Lym.Business.csproj",
+        "projectName": "Lym.Business",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Business\\Lym.Business.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj",
+        "projectName": "Lym.Common",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.10.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RazorEngine.NetCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.Security.Cryptography.Cng": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Core\\Lym.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Core\\Lym.Core.csproj",
+        "projectName": "Lym.Core",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Core\\Lym.Core.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "CSRedisCore": {
+              "target": "Package",
+              "version": "[3.6.6, )"
+            },
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.0.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj",
+        "projectName": "Lym.Model",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.0.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj",
+        "projectName": "Lym.Respository.Interface",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj",
+        "projectName": "Lym.Respository.Service",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.BaseRespository\\Lym.BaseRespository.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Interface\\Lym.Respository.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.WebApi\\Lym.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.WebApi\\Lym.WebApi.csproj",
+        "projectName": "Lym.WebApi",
+        "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.WebApi\\Lym.WebApi.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://125.64.9.93:8281/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Application\\Lym.Application.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Business\\Lym.Business.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Business\\Lym.Business.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Common\\Lym.Common.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Model\\Lym.Model.csproj"
+              },
+              "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj": {
+                "projectPath": "D:\\mycode\\NetCore代码生成器\\lym-netcore-web-api-template\\Lym.Respository.Service\\Lym.Respository.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Autofac.Extras.DynamicProxy": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "IGeekFan.AspNetCore.Knife4jUI": {
+              "target": "Package",
+              "version": "[0.0.8, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.10, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
